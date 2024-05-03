@@ -65,7 +65,7 @@ the `/path/to/hash_generator` is in the same directory as main_cache_app
 
 2. Construct mapping between trace file and data file
 ```
-/path/to/trace_generator [hash_file] [block_size] fiu  home3 home3.xxxx1.blktrace .... home3.xxx20.blktrace
+/path/to/trace_generator [hash_file] [block_size] fiu home3 home3.xxxx1.blktrace .... home3.xxx20.blktrace
 ```
 `/path/to/trace_generator` is also located in the same directory as `main_cache_app`. After Constructing, two files with the same name but different suffixes will be generated. `home3.cd.txt` and `home3.austere.txt`, the former is the data set used by CDCache for testing, and the latter is used for testing by Austere.
 
@@ -73,12 +73,11 @@ the `/path/to/hash_generator` is in the same directory as main_cache_app
 
 Just run it according to the method in the usage section. Fill in the generated `home3.cd.txt` in `data_trace_path`, fill in the path of the prepared data file in `dataset_data_path`, and fill in the others as needed.
 
+### Appendix
 
+Due to time constraints, there is no throughput evaluation in the published paper. We later used the modified LZ4 to replace the LZ77 algorithm in the paper and measured the current throughput, as shown below:
 
-
-
-
-
+<img src="fig/throughputs.png" alt="drawing" width="50%"/>
 
 
 
